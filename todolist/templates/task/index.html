@@ -1,8 +1,7 @@
 
 <form method='post' action="add_todo/">
 {% csrf_token %}
-
-<input name='q' type="text">
+{{ form.title }}
 <input type="submit">
 
 </form>
@@ -13,7 +12,8 @@
     {{ task.title }}
 
 
- <a href='{% url 'delete_todo' task.pk %}'>a</a>
+ <a href='{% url 'delete_todo' task.pk %}'>d</a>
+ <a href='{% url 'edit_todo' task.pk %}'>e</a>
 
 <br>
 {% endfor %}
