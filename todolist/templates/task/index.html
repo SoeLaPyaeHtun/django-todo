@@ -1,0 +1,15 @@
+
+<form method='post' action="add_todo/">
+{% csrf_token %}
+
+<input name='q' type="text">
+<input type="submit">
+
+</form>
+
+
+{% for task in tasks %}
+
+    {{ task.title }}
+<br>
+{% endfor %}
