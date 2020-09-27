@@ -11,5 +11,9 @@
 {% for task in tasks %}
 
     {{ task.title }}
+
+
+ <a href='{% url 'delete_todo' task.pk %}'>a</a>
+
 <br>
 {% endfor %}
